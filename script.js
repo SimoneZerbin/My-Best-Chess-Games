@@ -1,4 +1,4 @@
-import { Chess } from "./public/libs/chess.js";
+import { Chess } from "./libs/chess.js";
 import { games } from "./games.js";
 import { translations, translatePage, currentLang, toggleLang } from "./translation.js";
 
