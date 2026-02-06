@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let moves = [];
   let moveIndex = 0;
 
-  // DOM
   const yearFilter = document.getElementById("yearFilter");
   const colorFilter = document.getElementById("colorFilter");
   const gameSelect = document.getElementById("gameSelect");
@@ -21,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const gameMeta = document.getElementById("gameMeta");
   const gameDescription = document.getElementById("gameDescription");
   const moveInfo = document.getElementById("move-info");
-  const footerText = document.getElementsByTagName("footer")[0];
 
   const langBtn = document.getElementById("langToggle");
 
@@ -47,16 +45,17 @@ document.addEventListener("DOMContentLoaded", () => {
     filtered.forEach(g => {
       const opt = document.createElement("option");
       opt.value = g.id;
-      opt.textContent = `${g.year} • ${g.title[currentLang]}`;
+      opt.textContent = `${g.title[currentLang]} • ${translations[currentLang][g.color]} • ${g.year}`;
       gameSelect.appendChild(opt);
     });
 
-    if (filtered.length) loadGame(filtered[0].id);
+    if (filtered.length) 
+      loadGame(filtered[0].id);
   }
 
   // ===== CARICA PARTITA =====
-  function loadGame(id) {
-    const g = games.find(x => x.id === id);
+  function loadGame(idGame) {
+    const g = games.find(x => x.id === parseInt(idGame));
     if (!g) return;
 
     game.reset();
@@ -160,6 +159,20 @@ document.addEventListener("DOMContentLoaded", () => {
   colorFilter.addEventListener("change", updateGameList);
   gameSelect.addEventListener("change", e => loadGame(e.target.value));
 
+  // DOM
+  // Listener: tasto premuto
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowRight") {
+      nextMove();
+      e.preventDefault();
+    }
+
+    if (e.key === "ArrowLeft") {
+      prevMove();
+      e.preventDefault();
+    }
+  });
+
   document.getElementById("nextBtn").onclick = nextMove;
   document.getElementById("prevBtn").onclick = prevMove;
   document.getElementById("startBtn").onclick = startGame;
@@ -170,4 +183,5 @@ document.addEventListener("DOMContentLoaded", () => {
   translatePage(currentLang);
   updateLangButton();
   updateGameList();
+  
 });

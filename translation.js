@@ -3,7 +3,7 @@ export let currentLang = "it";
 export const translations = {
   it: {
     title: "♟️ Le mie migliori partite di scacchi ♟️",
-    subtitle: "Ciao a tutti, mi chiamo Simone, ho 22 anni <br> e sono un candidato maestro di scacchi con un elo di 2050.<br> Ho creato questa pagine per condividere le mie partite migliori,<br> giocate in tornei ufficiali oppure online.<br>Spero che le mie partite vi piacciano e vi facciano scoprire nuove idee.<br> Buona visione!",
+    subtitle: "Ciao a tutti, mi chiamo Simone, ho 22 anni <br> e sono un candidato maestro di scacchi con un elo di 2050.<br> Ho creato questa pagina per condividere le mie partite migliori,<br> che ho giocato in tornei ufficiali oppure online.<br>Spero che le mie partite vi piacciano e vi facciano scoprire nuove idee.<br> Buona visione!",
     year: "Anno",
     color: "Colore",
     game: "Partita",
