@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>My best Chess Games</title>
+
+  <!-- Chessboard.js -->
+  <link rel="stylesheet"
+        href="https://unpkg.com/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css" />
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="chessboardjs-1.0.0/css/chessboard-1.0.0.min.css" />
+  <link rel="icon" href="images/chess_icon.webp" />
+</head>
+
+<body>
+  <header>
+    <div class="header-top">
+      <h1 data-i18n="title">♟️ Le mie migliori partite</h1>
+      <button id="langToggle" class="lang-btn">
+        <img src="./images/italy.png" class="flag it" alt="IT" /> <span class="lang-text">IT</span>
+        <img src="./images/united-kingdom.png" class="flag en" alt="EN" /> <span class="lang-text">EN</span>
+      </button>
+    </div>
+    <p data-i18n="subtitle">Una selezione delle mie partite preferite</p>
+  </header>
+
+  <main>
+    <aside class="panel">
+      <label data-i18n="year">Anno</label>
+      <select id="yearFilter"></select>
+
+      <label data-i18n="color">Colore</label>
+      <select id="colorFilter"></select>
+
+      <label data-i18n="game">Partita</label>
+      <select id="gameSelect"></select>
+
+      <div class="info">
+        <h3 id="gameTitle"></h3>
+        <p id="gameMeta"></p><br>
+        <p id="gameDescription"></p>
+      </div>
+    </aside>
+
+    <section class="board-area">
+      <div id="board"></div>
+      <!-- Informazioni mossa -->
+      <div id="move-info" class="annotation"></div>
+
+      <div class="controls">
+        <button id="startBtn" data-i18n="start">⏮ Inizio</button>
+        <button id="prevBtn" data-i18n="prev">◀ Indietro</button>
+        <button id="nextBtn" data-i18n="next">Avanti ▶</button>
+        <button id="endBtn" data-i18n="end">Fine ⏭</button>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p data-i18n = "footer">Se volete sfidarmi, potete mandarmi un invito all'account chess.com "<strong>Im_ZerBiN</strong>"</p>
+  </footer>
+
+  <!-- Librerie -->
+   <!-- jQuery (PRIMA DI TUTTO) -->
+  <script src="./public/libs/jquery-3.4.1.min.js"></script>
+  <script src="chessboardjs-1.0.0/js/chessboard-1.0.0.min.js"></script>
+
+  <!-- App -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>

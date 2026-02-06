@@ -1,0 +1,186 @@
+/* ==================== RESET E BASE ==================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+/* ==================== HEADER ==================== */
+header {
+  position: relative;  /* necessario per posizionare il bottone assoluto */
+  width: 100%;
+  padding: 24px;
+  border-bottom: 1px solid #1e293b;
+  text-align: center;  /* centra titolo e sottotitolo */
+}
+
+.header-top h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.header-top .lang-btn {
+  position: absolute;  /* posiziona il bottone indipendente dal titolo */
+  top: 24px;           /* allineamento verticale */
+  right: 24px;         /* distanza dal bordo destro */
+}
+
+header p {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #94a3b8;
+}
+
+
+
+/* ==================== BOTTONE LINGUA ==================== */
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border: 2px solid #facc15;
+  border-radius: 6px;
+  background-color: #1f2937;
+  color: #facc15;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  transition: all 0.2s ease;
+}
+
+.lang-btn .flag {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  object-fit: cover;
+  vertical-align: middle;
+  transition: all 0.2s ease;
+  opacity: 0.5;          /* bandiera di default leggermente trasparente */
+}
+
+.lang-btn .lang-text {
+  font-weight: bold;
+  transition: all 0.2s ease;
+  opacity: 0.5;          /* testo di default leggermente trasparente */
+}
+
+/* bandiera e testo attivi */
+.lang-btn .active {
+  opacity: 1 !important;
+  transform: scale(1.3);
+}
+
+.lang-btn:hover {
+  background-color: #fbbf24;
+  color: #1f2937;
+}
+
+/* ==================== MAIN GRID ==================== */
+main {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 24px;
+  padding: 24px;
+}
+
+/* ==================== PANNELLO FILTRI ==================== */
+.panel {
+  background: #020617;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.panel label {
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.panel select {
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px;
+  background: #020617;
+  color: #e5e7eb;
+  border: 1px solid #334155;
+  border-radius: 6px;
+}
+
+/* ==================== INFO PARTITA ==================== */
+.info {
+  margin-top: 20px;
+  padding-top: 12px;
+  border-top: 1px solid #1e293b;
+}
+
+.info h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.info p {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* ==================== SCACCHIERA ==================== */
+.board-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 10%;
+}
+
+#board {
+  width: 450px;
+  margin-bottom: 16px;
+}
+
+/* ==================== CONTROLLI ==================== */
+.controls button {
+  background: #020617;
+  color: #e5e7eb;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.controls button:hover {
+  background: #1e293b;
+}
+
+/* ==================== INFO MOSSA / ANNOTAZIONE ==================== */
+.annotation {
+  margin-top: 12px;
+  font-style: italic;
+  text-align: center;
+  color: #facc15;
+  font-weight: bold;
+}
+
+footer {
+  width: 100%;
+  padding: 16px 24px;
+  background-color: #020617;   /* stesso colore della panel */
+  color: #facc15;              /* giallo per risaltare */
+  text-align: center;          /* testo centrato */
+  border-top: 1px solid #1e293b;
+  font-size: 14px;
+  margin-top: 24px;
+}
+
+footer strong {
+  color: #ffffff; /* evidenzia il nickname */
+}
