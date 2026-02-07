@@ -26,7 +26,7 @@ export const games = [
       en: "Draw against a Grandmaster"
     },
     opponent: "Kenneth Solomon",
-    result: "0-1",
+    result: "1/2 - 1/2",
     pgn: `
       1. d4 d5 2. Nf3 Nf6 3. c4 dxc4 4. e3 e6 5. Bxc4 c5 6. O-O a6 7. Bd3 Nc6 8. a3 b5 9. Nc3 Bb7 10. Qe2 cxd4 11. exd4 Be7 12. Rd1 O-O 13. h4 h6 14. Bc2 Na5 15. Ne5 Nd5 16. Qd3 f5 17. Ng6 Rf6 18. h5 Bd6 19. Qe2 Qc7 20. Nxd5 Bxd5 21. b4 Nc4 22. a4 Qb7 23. f3 Bxb4 24. axb5 axb5 25. Rb1 Bd6 26. Bb3 Qc7 27. Bb2 Rf7 28. Bxc4 Bxc4 29. Qe3 f4 30. Qe4 Bd5 31. Qe2 Rf5 32. Ra1 Rb8 33. Ne5 Bxe5 34. dxe5 Rxh5 35. Bd4 Qe7 36. Qf2 Qg5 37. Ba7 Rc8 38. Rdc1 Rxc1+ 39. Rxc1 Bc4 40. Bd4 Rh4 41. Ra1 Bd3 42. Qd2 Bf5 43. Ra8+ Kh7 44. Bf2 Rh5 45. Qd8 Qxd8 46. Rxd8 Bc2 47. Rc8 Bb3 48. Bd4 Bc4 49. Rc7 Rf5 50. Kf2 h5 51. Kg1 h4 52. Bc3 Rg5 53. Kf2 Rf5 54. Bd4 Bd5 55. Bc3 Kg6 56. Rc8 Rh5 57. Rf8 Rf5 58. Rh8 Rh5 59. Rf8 1/2-1/2
     `,

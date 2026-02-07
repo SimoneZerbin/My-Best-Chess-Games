@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const game = new Chess();
   const board = Chessboard("board", {
     position: "start",
-    draggable: false
+    draggable: false,
+    responsive: true
   });
 
   let moves = [];
